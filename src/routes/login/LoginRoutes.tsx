@@ -1,7 +1,9 @@
 import React from 'react';
 import {LoginScreen} from 'src/screens/login/LoginScreen';
-import {ILoginComponentProps} from 'src/types/login/LoginStackNavigations';
+import {INavigationComponentProps} from 'src/types/RootStackNavigations';
 
-export const Login: React.FC<ILoginComponentProps> = ({navigation}) => {
+export const Login: React.FC<INavigationComponentProps<'Login'>> = ({
+  navigation,
+}) => {
   return <LoginScreen navigation={navigation} />;
 };

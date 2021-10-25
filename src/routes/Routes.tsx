@@ -15,19 +15,24 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
       <Stack.Navigator
         screenOptions={{
           // press cntrl + space to check the params
-          headerShown: false,
+          headerShown: true,
         }}
         initialRouteName="Login">
         <Stack.Screen
           name="Login"
           component={Login}
-          options={
-            {
-              // press cntrl + space to check the params
-            }
-          }
+          options={{
+            // press cntrl + space to check the params
+            headerTitle: 'get me in',
+          }}
         />
-        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen
+          name="Register"
+          component={Register}
+          options={{
+            headerTitle: 'add me in',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

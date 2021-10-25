@@ -1,3 +1,2 @@
-import {Routes} from 'src/routes/Routes';
-
-export default Routes;
+import {Providers} from 'src/contexts-providers/Providers';
+export default Providers;

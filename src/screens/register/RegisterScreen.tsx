@@ -1,10 +1,11 @@
 import React from 'react';
-import {IRegisterComponentProps} from 'src/types/register/RegisterStackNavigation';
+import {INavigationComponentProps} from 'src/types/register/RegisterStackNavigation';
 import {Button, Text} from 'react-native';
 import {CenterComponent} from 'src/components/CenterComponent';
 
-export const RegisterScreen: React.FC<IRegisterComponentProps> = ({
+export const RegisterScreen: React.FC<INavigationComponentProps> = ({
   navigation,
+  route,
 }) => {
   function navigateToLogin() {
     console.log('triggered');
@@ -13,6 +14,7 @@ export const RegisterScreen: React.FC<IRegisterComponentProps> = ({
   return (
     <CenterComponent>
       <Text>I am vjk register screen</Text>
+      <Text> {route.name} </Text>
       <Button title="go to login" onPress={() => navigateToLogin()} />
     </CenterComponent>
   );

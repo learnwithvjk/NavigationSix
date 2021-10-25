@@ -1,7 +1,10 @@
 import React from 'react';
 import {RegisterScreen} from 'src/screens/register/RegisterScreen';
-import {IRegisterComponentProps} from 'src/types/register/RegisterStackNavigation';
+import {INavigationComponentProps} from 'src/types/RootStackNavigations';
 
-export const Register: React.FC<IRegisterComponentProps> = ({navigation}) => {
-  return <RegisterScreen navigation={navigation} />;
+export const Register: React.FC<INavigationComponentProps<'Register'>> = ({
+  navigation,
+  route,
+}) => {
+  return <RegisterScreen route={route} navigation={navigation} />;
 };
